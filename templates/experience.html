@@ -1,0 +1,47 @@
+
+
+<section id="experience">
+      <div class="container px-6 py-8 mx-auto">
+          <h1 class="text-3xl font-semibold text-center  capitalize lg:text-4xl text-white" x-intersect="$el.classList.add('focus-in-expand-fwd')">Personal Experience</h1>
+  
+          <p class="max-w-2xl mx-auto mt-4 text-center text-gray-300 xl:mt-6 " x-intersect="$el.classList.add('text-focus-in')">
+              i started my web development journey in 2022 & became a Professional developer so early,Alhamdulillah. 
+              before that i was Ethical Hacker and Crypto Trader .
+          </p>
+          
+          {% for info in data %}
+            
+          
+            
+          <div x-intersect="$el.classList.add('text-focus-in')" class="grid grid-cols-1 gap-8 mt-6 xl:mt-12 xl:gap-12 md:grid-cols-2 lg:grid-cols-3">
+             <div class="w-full p-8 space-y-8 text-center border bg-transparent  rounded-lg border-purple-700">
+              <p class="font-semibold text-3xl text-white uppercase ">Projects</p>
+
+              <h2 class="text-5xl font-bold text-white uppercase dark:text-gray-100">
+                  {{info.projects}}
+              </h2>
+             </div>
+  
+              <div class="w-full p-8 space-y-8 text-center border bg-transparent  rounded-lg border-purple-700">
+                <p class="font-semibold text-3xl text-white uppercase ">Experience</p>
+
+                <h2 class="text-5xl font-semibold text-white uppercase dark:text-gray-100">
+                    {{info.experience}} <P class="text-2xl">{% if info.experience == '1' %}
+                    Year
+                {% else %}
+                    Years
+                {% endif %}
+                       </P>
+                </h2>
+             </div>
+  
+              <div class="w-full p-8 space-y-8 text-center border bg-transparent  rounded-lg border-purple-700">
+                  <p class="font-semibold text-3xl text-white uppercase ">Companies</p>
+  
+                  <h2 class="text-5xl font-bold text-white uppercase dark:text-gray-100">
+                      {{info.company}}
+                  </h2>
+              </div>{% endfor %}
+          </div>
+      </div>
+</section>

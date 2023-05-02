@@ -1,0 +1,29 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="scroll scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@marcreichel/alpine-typewriter@latest/dist/alpine-typewriter.min.js"></script>
+    {% compress css %}
+      <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %} 
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'src/alpinee.js' %}"></script>
+    {% endcompress %}
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'src/alpine.js' %}"></script>
+  {% endcompress %}
+ 
+  
+  </head>
+  <body class="bg-gray-950 ">
+    {% block content %}
+    {% endblock content %}
+  </body>
+</html>
+.
