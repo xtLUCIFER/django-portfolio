@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a5fpbfodtuxv5bbaihj$(=kdl#y02&i@ie_$gsqaipt*qd(l-p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'static/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
